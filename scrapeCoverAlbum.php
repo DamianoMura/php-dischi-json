@@ -14,10 +14,9 @@ foreach ($albums as $album) {
   libxml_use_internal_errors(true);
   $dom->loadHTML($scrape_content);
   libxml_clear_errors();
-  $tdtags = $dom->getElementsByTagName('img');
-  $img_url = $tdtags[1]->getAttribute('src');
-  // echo  $img_url, " <br>";
-  echo "<img src=" . $img_url . "/> ";
+  $imgtags = $dom->getElementsByTagName('img');
+  $img_url = $imgtags[1]->getAttribute('src');
+
 
   $album["cover_album_url"] = $img_url;
   $new_albums[] = $album;
