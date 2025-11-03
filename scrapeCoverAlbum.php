@@ -22,9 +22,4 @@ foreach ($albums as $album) {
   $album["cover_album_url"] = $img_url;
   $new_albums[] = $album;
 }
-echo "<pre>";
-
-var_dump($new_albums);
-$new_albums_json = json_encode($new_albums, JSON_PRETTY_PRINT);
-file_put_contents('edited_library.json', $new_albums_json);
-echo "</pre>";
+file_put_contents('library.json', json_encode($new_albums));
