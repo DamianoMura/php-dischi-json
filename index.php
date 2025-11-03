@@ -1,11 +1,14 @@
 <?php
 
-
+$empties = false;
 $albums = json_decode(file_get_contents('library.json'), true);
 foreach ($albums as $album) {
   if ($album["cover_album_url"] === "") {
-    include 'scrapeCoverAlbum.php';
+    $empties = true;
   }
+}
+if ($empties) {
+  include 'scrapeCoverAlbum.php';
 }
 $albums = json_decode(file_get_contents('library.json'), true);
 ?>
