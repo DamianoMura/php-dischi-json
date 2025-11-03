@@ -2,11 +2,12 @@
 
 
 $albums = json_decode(file_get_contents('library.json'), true);
-
-if ($albums[count($albums) - 1]["cover_album_url"] == "") {
-  include './scrapeCoverAlbum.php';
-  $albums = json_decode(file_get_contents('library.json'), true);
+foreach ($albums as $album) {
+  if ($album["cover_album_url"] === "") {
+    include 'scrapeCoverAlbum.php';
+  }
 }
+$albums = json_decode(file_get_contents('library.json'), true);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,12 +20,12 @@ if ($albums[count($albums) - 1]["cover_album_url"] == "") {
 </head>
 
 <body>
-  <header>
-    <h1 class="text-center my-4">JDW MUSIC</h1>
-
-  </header>
+  <?php include 'header.php'; ?>
   <main>
     <div class="container">
+      <div class="add-album mb-4 text-center">
+        <a class="btn btn-primary" href="./add-album.php">add new album</a>
+      </div>
       <div class="row">
         <?php foreach ($albums as $album) : ?>
           <div class="col-12 text-center mb-4">
