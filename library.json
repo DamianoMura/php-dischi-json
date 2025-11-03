@@ -1,0 +1,68 @@
+
+  [
+    {
+      "title": "Abbey Road",
+      "artist": "The Beatles",
+      "cover_album_url": "",
+      "publish_year": 1969,
+      "genre": "Rock"
+    },
+    {
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "cover_album_url": "",
+      "publish_year": 1982,
+      "genre": "Pop"
+    },
+    {
+      "title": "Kind of Blue",
+      "artist": "Miles Davis",
+      "cover_album_url": "",
+      "publish_year": 1959,
+      "genre": "Jazz"
+    },
+    {
+      "title": "The Dark Side of the Moon",
+      "artist": "Pink Floyd",
+      "cover_album_url": "",
+      "publish_year": 1973,
+      "genre": "Progressive Rock"
+    },
+    {
+      "title": "Back to Black",
+      "artist": "Amy Winehouse",
+      "cover_album_url": "",
+      "publish_year": 2006,
+      "genre": "Soul"
+    },
+    {
+      "title": "Nevermind",
+      "artist": "Nirvana",
+      "cover_album_url": "",
+      "publish_year": 1991,
+      "genre": "Grunge"
+    },
+    {
+      "title": "Rumours",
+      "artist": "Fleetwood Mac",
+      "cover_album_url": "",
+      "publish_year": 1977,
+      "genre": "Rock"
+    },
+    {
+      "title": "To Pimp a Butterfly",
+      "artist": "Kendrick Lamar",
+      "cover_album_url": "",
+      "publish_year": 2015,
+      "genre": "Hip Hop"
+    },
+ 
+    {
+      "title": "Born to Run",
+      "artist": "Bruce Springsteen",
+      "cover_album_url": "",
+      "publish_year": 1975,
+      "genre": "Rock"
+    }
+  ]
+   

@@ -16,3 +16,5 @@ Solo a questo punto sarà utile passare alla lettura della lista da un file JSON
 ## Bonus
 
 Tramite un form, dai la possibilità all’utente di aggiungere un disco dall’elenco.
+
+## added scraper to get images from google automatically (todo)
