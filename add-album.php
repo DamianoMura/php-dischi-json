@@ -1,3 +1,18 @@
+<?php
+if (isset($_GET['artist']) && isset($_GET['title']) && isset($_GET['publish_year'])) {
+  $new_album = [
+    "artist" => $_GET['artist'],
+    "title" => $_GET['title'],
+    "publish_year" => $_GET['publish_year'],
+    "cover_album_url" => ""
+  ];
+
+  $albums = json_decode(file_get_contents('library.json'), true);
+  $albums[] = $new_album;
+  file_put_contents('library.json', json_encode($albums));
+  header('Location: index.php');
+} ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +32,7 @@
         <h2>Add album</h2>
       </div>
       <div class="card-body">
-        <form action="save-album.php" method="POST">
+        <form action="add-album.php" method="GET">
           <div class="mb-3">
             <label for="artist" class="form-label">Artist</label>
             <input type="text" class="form-control" id="artist" name="artist" required>
