@@ -32,13 +32,20 @@ $albums = json_decode(file_get_contents('library.json'), true);
       </div>
       <div class="row">
         <?php foreach ($albums as $album) : ?>
-          <div class="col-12 text-center mb-4">
-            <div class="d-flex align-items-center">
-              <img src=<?php echo $album["cover_album_url"] ?> alt=<?php echo $album["title"] ?> class="img-fluid me-3">
-              <h3><?php echo $album["artist"] ?></h3>
-              <span>&nbsp;-&nbsp;</span>
-              <h4><?php echo $album["title"] ?></h4>
-              <h5>(<?php echo $album["publish_year"] ?>)</h5>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-3">
+            <div class="card h-100">
+              <div class="card-header d-flex flex-col">
+                <span><?php echo $album["artist"] ?></span>
+              </div>
+              <div class="card-body">
+                <img src=<?php echo $album["cover_album_url"] ?> alt=<?php echo $album["title"] ?> class="img-fluid me-3">
+              </div>
+              <div class="card-footer">
+
+                <span><?php echo $album["title"] ?></span>
+                <span>(<?php echo $album["publish_year"] ?>)</span>
+
+              </div>
             </div>
           </div>
         <?php endforeach; ?>
