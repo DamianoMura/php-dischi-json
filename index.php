@@ -22,6 +22,7 @@ $albums = json_decode(file_get_contents('library.json'), true);
   <title>Welcome to JDW MUSIC</title>
 </head>
 
+
 <body>
   <?php include 'header.php'; ?>
   <main>
