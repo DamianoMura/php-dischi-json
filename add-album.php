@@ -35,7 +35,7 @@ if ((isset($_GET['artist']) && isset($_GET['title']) && isset($_GET['publish_yea
   //sobstituting spaces with + as you would do manually on the browser's query string =)
   $title = str_replace(" ", "+", $title);
   //goes and gets the web page with this query string
-  $query_string = "https://www.google.com/search?q=$title&sca_esv=dc724815bbf34a06&hl=it&biw=1136&bih=809&udm=2&sxsrf=AE3TifPnHAOPrhbXWPvBmUst-f08BfK6RQ%3A1761847569586&ei=EakDaazDI7WO9u8P6L2UqAM&ved=0ahUKEwjsj6LUwcyQAxU1h_0HHegeBTUQ4dUDCBQ&uact=5&oq=Back+to+Black&gs_lp=Egtnd3Mtd2l6LWltZyINQmFjayB0byBCbGFjazILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgsQABiABBixAxiDATIFEAAYgARInQZQAFgAcAB4AJABAJgBlAGgAZQBqgEDMC4xuAEDyAEA-AEC-AEBmAIBoAKYAZgDAJIHAzAuMaAHjQWyBwMwLjG4B5gBwgcDMi0xyAcD&sclient=gws-wiz-img";
+  $query_string = "https://www.google.com/search?q=$title&sca_esv=dc724815bbf34a06&hl=it&biw=1136&bih=809&udm=2&sxsrf=AE3TifPnHAOPrhbXWPvBmUst-f08BfK6RQ%3A1761847569586&ei=EakDaazDI7WO9u8P6L2UqAM&ved=0ahUKEwjsj6LUwcyQAxU1h_0HHegeBTUQ4dUDCBQ&uact=5&&gs_lp=Egtnd3Mtd2l6LWltZyINQmFjayB0byBCbGFjazILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgsQABiABBixAxiDATIFEAAYgARInQZQAFgAcAB4AJABAJgBlAGgAZQBqgEDMC4xuAEDyAEA-AEC-AEBmAIBoAKYAZgDAJIHAzAuMaAHjQWyBwMwLjG4B5gBwgcDMi0xyAcD&sclient=gws-wiz-img";
 
   $scrape_content = file_get_contents($query_string);
   $dom = new DOMDocument();
